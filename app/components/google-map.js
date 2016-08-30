@@ -11,12 +11,20 @@ export default Ember.Component.extend({
     var map = this.get('map').findMap(container, options);
       window.google.maps.event.addListener(map, 'click', function(event) {
         addMarker(event.latLng, map);
+
       });
       function addMarker(location, map) {
         var marker = new google.maps.Marker({
           position: location,
           map: map
         });
+        var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+marker.position.lat()+','+marker.position.lng()+'&radius=50&type=brewery&key=AIzaSyDttrvfo7P6LseYqJztA_M5bYTm4sQaReY';
+    return Ember.$.getJSON(url).then(function(responseJSON){
+      console.log(marker.position.lat);
+      console.log(responseJSON.results);
+      console.log(responseJSON.results);
+      return responseJSON.results;
+    });
       }
       var infoWindow = new google.maps.InfoWindow({map: map});
         if (navigator.geolocation) {
@@ -47,5 +55,6 @@ export default Ember.Component.extend({
                                 'Error: The Geolocation service failed.' :
                                 'Error: Your browser doesn\'t support geolocation.');
         }
+        console.log(this.get('map').get('container'));
       }
   });
