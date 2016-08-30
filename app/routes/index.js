@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 
   actions: {
     searchZip(params) {
-      this.transitionTo('zip', params.zip);
+      this.transitionTo('index.zip', params.zip);
     }
   }
 });
