@@ -1,7 +1,19 @@
 .map-display {
     height: 600px;
     width: 600px;
+}
+
+header{
+  @include flex($ai:center);
+  height: 15rem;
+  .logo{
+    margin-left: 8rem;
+    display: flex;
   }
+  h1{
+    margin: 0;
+  }
+}
 
 #age-gate{
   height: 100vh;
@@ -14,10 +26,7 @@
   div{
     height: 35rem;
     width: 60rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, column);
   }
   button{
     margin-top: 2rem;
