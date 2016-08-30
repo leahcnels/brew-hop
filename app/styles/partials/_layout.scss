@@ -1,0 +1,26 @@
+.map-display {
+    height: 600px;
+    width: 600px;
+  }
+
+#age-gate{
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  @include flex(center, center);
+  display: flex;
+  div{
+    height: 35rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    margin-top: 2rem;
+    margin-left: 16rem;
+  }
+}

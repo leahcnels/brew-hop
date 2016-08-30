@@ -1,0 +1,26 @@
+body{
+  @include font-stack($c:$offBlack, $f:$osc);
+}
+
+#age-gate{
+  background-color: rgba(56, 56, 56, .9);
+  div{
+    background-color: white;
+    background-image: url('../images/beerOnBlack.jpg');
+    background-position: right;
+    @include font-stack(3.5rem, white);
+    border-radius: 3px;
+    p{
+      text-shadow: 2px 2px black;
+    }
+  }
+  button{
+    border: 3px solid $pilsner;
+    border-radius: 3px;
+    background-color: black;
+    &:hover{
+      border-color: white;
+      color: $pilsner;
+    }
+  }
+}
