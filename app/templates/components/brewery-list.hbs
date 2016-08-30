@@ -1,7 +1,10 @@
-{{#each venue as |venue|}}
-  <br>{{venue.name}}
-  <br>{{venue.location.address}}
-  <br>{{venue.location.lat}}, {{venue.location.lng}}
-  <br><a href="{{venue.url}}">{{venue.url}}</a>
-  <hr>
-{{/each}}
+<div class="searchResults">
+  {{#each venue as |venue|}}
+  <div class="brewery-tile">
+    <br>{{venue.name}}
+    <br>{{venue.location.address}}
+    <br>{{venue.location.lat}}, {{venue.location.lng}}
+    <br><a href="{{venue.url}}">{{venue.url}}</a>
+  </div>
+  {{/each}}  
+</div>

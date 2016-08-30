@@ -13,10 +13,12 @@ export default Ember.Component.extend({
         addMarker(event.latLng, map);
 
       });
+
       function addMarker(location, map) {
         var marker = new google.maps.Marker({
           position: location,
-          map: map
+          map: map,
+          icon: '../images/beerCircle.png'
         });
         var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+marker.position.lat()+','+marker.position.lng()+'&radius=50&type=brewery&key=AIzaSyDttrvfo7P6LseYqJztA_M5bYTm4sQaReY';
     return Ember.$.getJSON(url).then(function(responseJSON){

@@ -22,7 +22,7 @@ header{
 }
 
 #age-gate{
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   z-index: 1;
   position: absolute;
@@ -38,4 +38,11 @@ header{
     margin-top: 2rem;
     margin-left: 16rem;
   }
+}
+
+.searchResults{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
 }
