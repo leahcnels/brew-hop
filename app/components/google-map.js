@@ -8,44 +8,44 @@ export default Ember.Component.extend({
       center: {lat: 37.0902, lng: 95.7129},
       zoom: 15,
       styles: [
-  {
-    "featureType": "water",
-    "stylers": [
-      { "color": "#D69C2E" }
-    ]
-  },{
-    "featureType": "landscape.natural.landcover",
-    "stylers": [
-      { "color": "#8C322A" }
-    ]
-  },{
-    "featureType": "landscape.natural.terrain",
-    "stylers": [
-      { "color": "#141416" }
-    ]
-  },{
-    "featureType": "landscape.man_made",
-    "stylers": [
-      { "color": "#8C322A" }
-    ]
-  },{
-    "featureType": "poi.park",
-    "stylers": [
-      { "color": "#BB562C" },
-      { "hue": "#c3ff00" }
-    ]
-  },{
-    "featureType": "landscape",
-    "stylers": [
-      { "color": "#cbc144" },
-      { "hue": "#ffff00" },
-      { "saturation": 21 },
-      { "lightness": 44 },
-      { "gamma": 1.16 }
-    ]
-  },{
-  }
-]
+        {
+          "featureType": "water",
+          "stylers": [
+            { "color": "#D69C2E" }
+          ]
+        },{
+          "featureType": "landscape.natural.landcover",
+          "stylers": [
+            { "color": "#8C322A" }
+          ]
+        },{
+          "featureType": "landscape.natural.terrain",
+          "stylers": [
+            { "color": "#141416" }
+          ]
+        },{
+          "featureType": "landscape.man_made",
+          "stylers": [
+            { "color": "#8C322A" }
+          ]
+        },{
+          "featureType": "poi.park",
+          "stylers": [
+            { "color": "#BB562C" },
+            { "hue": "#c3ff00" }
+          ]
+        },{
+          "featureType": "landscape",
+          "stylers": [
+            { "color": "#cbc144" },
+            { "hue": "#ffff00" },
+            { "saturation": 21 },
+            { "lightness": 44 },
+            { "gamma": 1.16 }
+          ]
+        },{
+        }
+      ]
     };
     var map = this.get('map').findMap(container, options);
       window.google.maps.event.addListener(map, 'click', function(event) {

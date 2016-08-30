@@ -43,13 +43,9 @@ header{
       text-shadow: 2px 2px black;
     }
   }
-  button{
-    border: 3px solid $pilsner;
-    border-radius: 3px;
-    background-color: black;
-    &:hover{
-      border-color: white;
-      color: $pilsner;
-    }
-  }
+}
+
+.brewery-tile{
+  background-color: white;
+  border-radius: 2px;
 }

@@ -40,9 +40,26 @@ header{
   }
 }
 
+#resultSection{
+  @include flex(center);
+  margin-top: 3rem;
+}
+
 .searchResults{
-  display: flex;
-  flex-direction: column;
+  @include flex($fd:column);
   flex-wrap: wrap;
   height: 100vh;
+  width: 93rem;
+  .brewery-tile{
+    height: 11rem;
+    width: 29rem;
+    margin-bottom: 2rem;
+    p{
+      margin-left: 1rem;
+      &:nth-child(1){
+        margin-top: 1rem;
+      }
+    }
+  }
 }
+// Do some math so that the results section is always the right height
