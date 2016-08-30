@@ -22,7 +22,6 @@ export default Ember.Component.extend({
             position: location,
             map: map
           });
-          console.log(marker.position.lat);
           var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+marker.position.lat()+','+marker.position.lng()+'&radius=50&type=brewery&key=AIzaSyDttrvfo7P6LseYqJztA_M5bYTm4sQaReY';
           return Ember.$.getJSON(url).then(function(responseJSON){
 
