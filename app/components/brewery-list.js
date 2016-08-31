@@ -11,9 +11,9 @@ export default Ember.Component.extend({
       var breweryId = '50327c8591d4c4b30a586d5d';
       var url = urlPrefix + 'll=' +this.get('pos').lat+','+this.get('pos').lng+ '&categoryId=' + breweryId + '&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20160829';
         return Ember.$.getJSON(url).then(function(responseJSON){
+
         return responseJSON.response.venues;
       });
     }
-
-  })
+  }
 });
