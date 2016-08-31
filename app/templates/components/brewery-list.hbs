@@ -1,3 +1,7 @@
+{{#if (await jsonResponse)}}
+  {{google-map pos=pos venues=(await jsonResponse)}}
+{{/if}}
+
 <ul>
   {{#each (await jsonResponse) as |venue|}}
     <br>{{venue.name}}
