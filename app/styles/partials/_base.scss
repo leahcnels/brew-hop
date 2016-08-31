@@ -1,0 +1,51 @@
+body{
+  @include font-stack($c:$offBlack, $f:$osc);
+  background-color: $offWhite;
+}
+
+header{
+  background-color: $stout;
+  a{
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+    &:focus{
+      text-decoration: none;
+    }
+  }
+  h1{
+    color: $pilsner;
+  }
+  .steer{
+    font-size: 5rem;
+  }
+  .meto{
+    font-size: 3rem;
+    position: relative;
+    left: 2.4rem;
+    bottom: 1rem;
+  }
+  .beer{
+    font-size: 7rem;
+  }
+}
+
+#age-gate{
+  background-color: rgba(56, 56, 56, .9);
+  div{
+    background-color: white;
+    background-image: url('../images/beerOnBlack.jpg');
+    background-position: right;
+    @include font-stack(3.5rem, white);
+    border-radius: 3px;
+    p{
+      text-shadow: 2px 2px black;
+    }
+  }
+}
+
+.brewery-tile{
+  background-color: white;
+  border-radius: 2px;
+}

@@ -1,0 +1,14 @@
+#age-gate{
+  button{
+    border: 3px solid $pilsner;
+    border-radius: 3px;
+    background-color: black;
+    &:hover{
+      border-color: white;
+      color: $pilsner;
+    }
+    &:focus{
+      outline: 0;
+    }
+  }
+}

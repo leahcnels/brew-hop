@@ -1,0 +1,64 @@
+.map-display {
+    height: 50vh;
+    width: 100%;
+}
+
+header{
+  @include flex($ai:center);
+  height: 15rem;
+  .logo{
+    margin-left: 8rem;
+    display: flex;
+  }
+  h1{
+    margin: 0;
+  }
+}
+
+#searchVenues{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#age-gate{
+  height: 100%;
+  width: 100vw;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  @include flex(center, center);
+  display: flex;
+  div{
+    height: 35rem;
+    width: 60rem;
+    @include flex(center, center, column);
+  }
+  button{
+    margin-top: 2rem;
+    margin-left: 16rem;
+  }
+}
+
+#resultSection{
+  @include flex(center);
+  margin-top: 3rem;
+}
+
+.searchResults{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 124rem;
+  .brewery-tile{
+    height: 11rem;
+    width: 29rem;
+    margin: 1rem 1rem;
+    p{
+      margin-left: 1rem;
+      &:nth-child(1){
+        margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ export default Ember.Component.extend({
 
   maps: Ember.inject.service('google-map'),
   jsonResponse: Ember.computed('pos', function() {
+
     if(this.get('pos')){
       var clientId = config.myClientId;
       var clientSecret = config.myClientSecret;
@@ -15,5 +16,6 @@ export default Ember.Component.extend({
         return responseJSON.response.venues;
       });
     }
+
   })
 });
