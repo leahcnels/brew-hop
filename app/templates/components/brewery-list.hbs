@@ -1,5 +1,5 @@
 <ul>
-  {{#each jsonResponse as |venue|}}
+  {{#each (await jsonResponse) as |venue|}}
     <br>{{venue.name}}
     <br>{{venue.location.address}}
     <br>{{venue.location.lat}}, {{venue.location.lng}}
@@ -7,4 +7,3 @@
     <hr>
   {{/each}}
 </ul>
-{{log jsonResponse}}

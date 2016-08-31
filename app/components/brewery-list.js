@@ -13,7 +13,7 @@ export default Ember.Component.extend({
     var url = urlPrefix + 'll=' +this.get('pos').lat+','+this.get('pos').lng+ '&categoryId=' + breweryId + '&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20160829';
 
     return Ember.$.getJSON(url).then(function(responseJSON){
-      console.log(responseJSON.response)
+      
       return responseJSON.response.venues;
     });
   })
