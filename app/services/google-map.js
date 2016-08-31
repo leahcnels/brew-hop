@@ -24,5 +24,4 @@ export default Ember.Service.extend({
     navigator.geolocation.getCurrentPosition(deferred.resolve);
     return deferred.promise();
   }
-
 });
