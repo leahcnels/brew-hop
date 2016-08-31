@@ -1,7 +1,7 @@
 
 
-  {{#each  (await) jsonResponse as |venue|}}
-    <br>{{log venue.name}}
+  {{#each  (await jsonResponse) as |venue|}}
+    <br>{{venue.name}}
     <br>{{venue.location.address}}
     <br>{{venue.location.lat}}, {{venue.location.lng}}
     <br><a href="{{venue.url}}">{{venue.url}}</a>
