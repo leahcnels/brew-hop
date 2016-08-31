@@ -27,7 +27,6 @@ export default Ember.Component.extend({
   }
 
   var infoWindow = new google.maps.InfoWindow({map: map});
-  console.log(this.get('map'));
     var pos = this.get('pos');
     infoWindow.setPosition(pos);
     infoWindow.setContent('Location found.');
