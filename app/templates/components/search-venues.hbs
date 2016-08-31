@@ -1,8 +1,4 @@
 <form id="searchVenues">
-  <div class="form-group">
-    <label for="zip">Zip</label>
-    {{input value=zip id="zip"}}
-  </div>
-
+  {{input value=zip id="zip" placeholder='Search by Zip'}}
   <button {{action 'searchZip'}}>Search</button>
 </form>

@@ -17,8 +17,9 @@ header{
 
 #searchVenues{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 16rem;
+  right: 1rem;
+  z-index: 1;
 }
 
 #age-gate{
@@ -51,7 +52,7 @@ header{
   flex-wrap: wrap;
   width: 124rem;
   .brewery-tile{
-    height: 11rem;
+    height: 15rem;
     width: 29rem;
     margin: 1rem 1rem;
     p{

@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Component.extend({
-  map: Ember.inject.service('google-map'),
-  didInsertElement: function(mainMap){
+  mapService: Ember.inject.service('google-map'),
+
+  didRender() {
     var container = this.$('.map-display')[0];
     var options = {
       center: {lat: 37.0902, lng: 95.7129},
@@ -43,40 +45,45 @@ export default Ember.Component.extend({
             { "lightness": 44 },
             { "gamma": 1.16 }
           ]
-        },{
+
         }
       ]
     };
-    var map = this.get('map').findMap(container, options);
-    window.google.maps.event.addListener(map, 'click', function(event) {
-      addMarker(event.latLng, map);
-    });
 
-    function addMarker(location, map) {
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        icon: '../images/beerCircle.png'
-      });
-      var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+marker.position.lat()+','+marker.position.lng()+'&radius=50&type=brewery&key=AIzaSyDttrvfo7P6LseYqJztA_M5bYTm4sQaReY';
-      return Ember.$.getJSON(url).then(function(responseJSON){
-      console.log(marker.position.lat);
-      console.log(responseJSON.results);
-      console.log(responseJSON.results);
-      return responseJSON.results;
-      });
-  }
+    this.get('mapService').createMap(container, options);
+    var map = this.get('mapService').map;
 
-  var infoWindow = new google.maps.InfoWindow({map: map});
-    console.log(this.get('map'));
+    var infoWindow = new google.maps.InfoWindow({map: map});
     var pos = this.get('pos');
     infoWindow.setPosition(pos);
     infoWindow.setContent('Location found.');
     map.setCenter(pos);
-  },
-  actions: {
-    debug() {
-      debugger;
+
+
+    if(this.get('venues')) {
+      var venues = this.get('venues').toArray();
+      var markersArray = [];
+      for(var venue of venues) {
+        var location = {lat: venue.location.lat, lng: venue.location.lng};
+        var name = venue.name;
+        var address = venue.location.address + " " + venue.location.city + ", " + venue.location.state;
+        var marker = new google.maps.Marker({
+          position:location,
+          map:map,
+          icon: '../images/beerCircle.png'
+        });
+        markersArray.push([marker, name, address]);
+        var infowindow = new google.maps.InfoWindow({
+          // empty
+        });
+        markersArray.forEach(function([marker, name, address]) {
+          marker.addListener('click', function() {
+            var contentString = '<p>' +name+ '</p>' + '<p>' +address+ '</p>'
+            infowindow.setContent(contentString);
+            infowindow.open(map, marker);
+          });
+        })
+      }
     }
   }
 });

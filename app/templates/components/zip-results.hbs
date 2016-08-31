@@ -1,11 +1,16 @@
 <section id="resultSection">
   <div class="searchResults">
-    {{#each venue as |venue|}}
-    <div class="brewery-tile">
-      <p>{{venue.name}}</p>
-      <p>{{venue.location.address}}</p>
-      <p><a href="{{venue.url}}">{{venue.url}}</a></p>
-    </div>
-    {{/each}}
+    {{#if venue}}
+      {{#each venue as |venue|}}
+      <div class="brewery-tile">
+        <p>{{venue.name}}</p>
+        <p>{{venue.location.address}}</p>
+        <p>{{venue.location.city}}, {{venue.location.state}}</p>
+        <p><a href="{{venue.url}}">{{venue.url}}</a></p>
+      </div>
+      {{/each}}
+    {{else}}
+      <p>No results</p>
+    {{/if}}
   </div>
 </section>

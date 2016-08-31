@@ -1,9 +1,14 @@
+
+{{#if (await jsonResponse)}}
+  {{google-map pos=pos venues=(await jsonResponse)}}
+{{/if}}
 <section id="resultSection">
   <div class="searchResults">
       {{#each (await jsonResponse) as |venue|}}
       <div class="brewery-tile">
         <p>{{venue.name}}</p>
         <p>{{venue.location.address}}</p>
+        <p>{{venue.location.city}}, {{venue.location.state}}</p>
         <p><a href="{{venue.url}}">{{venue.url}}</a></p>
       </div>
       {{/each}}

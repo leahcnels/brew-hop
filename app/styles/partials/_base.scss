@@ -3,6 +3,10 @@ body{
   background-color: $offWhite;
 }
 
+a{
+  color: $pilsner;
+}
+
 header{
   background-color: $stout;
   a{
@@ -42,6 +46,24 @@ header{
     p{
       text-shadow: 2px 2px black;
     }
+  }
+}
+
+#searchVenues{
+  color: $pilsner;
+  input{
+    background-color: $offBlack;
+    border: 1px solid $pilsner;
+    border-radius: 2px;
+    padding-left: 11px;
+  }
+  button{
+    background-color: $stout;
+    border: 1px solid $stout;
+    border-radius: 3px;
+  }
+  input:focus, button:focus{
+    outline: 0;
   }
 }
 
