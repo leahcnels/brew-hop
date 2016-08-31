@@ -24,7 +24,7 @@ header{
 #age-gate{
   height: 100%;
   width: 100vw;
-  z-index: 1;
+  z-index: 1000;
   position: absolute;
   top: 0;
   @include flex(center, center);

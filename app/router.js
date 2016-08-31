@@ -6,9 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('index', function() {
-      this.route('zip', {path: '/:zip'});
-    });
+  this.route('zip', {path: '/:zip'});
+  this.route('detail', {path: '/detail/:queryInfo'});
 });
 
 export default Router;
