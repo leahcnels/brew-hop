@@ -20,12 +20,11 @@ header{
   top: 0;
   right: 0;
 }
-
 #age-gate{
   height: 100%;
-  width: 100vw;
-  z-index: 1000;
-  position: absolute;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
   top: 0;
   @include flex(center, center);
   display: flex;
