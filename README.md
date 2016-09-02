@@ -4,7 +4,7 @@
 
 **By Bhawani Parajuli, Jim Klein, Leah Nelson and Kyle Helyar**
 
-Search for breweries near you! Results are returned by geolocation or zip code.
+Search for breweries near you! Results are returned by geolocation or zip code. The Google Maps API is used to obtain the users geolocation and search for breweries through the Foursquare API. Results are then displayed on the map.
 
 ## Prerequisites
 
@@ -15,6 +15,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* Foursquare Client ID and Secret
+* Google Developer API key
 
 ## Installation
 
@@ -22,7 +24,11 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
-* You will need a Client ID and Client Secret for Fourquare
+* You will need a Client ID and Client Secret for Fourquare. Include both in a .env file in the parent directory.
+  * export clientId="Your client ID goes here"
+  * export clientSecret="Your client secret goes here"
+* You will need a Google developer key.
+  * From the terminal, while in the brew-hop folder, run $ curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js?key= YOUR API KEY GOES HERE.
 
 ## Running / Development
 

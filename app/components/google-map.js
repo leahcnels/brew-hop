@@ -78,11 +78,11 @@ export default Ember.Component.extend({
         });
         markersArray.forEach(function([marker, name, address]) {
           marker.addListener('click', function() {
-            var contentString = '<p>' +name+ '</p>' + '<p>' +address+ '</p>'
+            var contentString = '<p>' +name+ '</p>' + '<p>' +address+ '</p>';
             infowindow.setContent(contentString);
             infowindow.open(map, marker);
           });
-        })
+        });
       }
     }
   }
