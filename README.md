@@ -15,8 +15,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
-* Foursquare Client ID and Secret
-* Google Developer API key
+* [Foursquare Client ID and Secret](https://developer.foursquare.com/)
+* [Google Developer API key](https://console.developers.google.com/flows/enableapi?apiid=maps_backend&keyType=CLIENT_SIDE&reusekey=true)
 
 ## Installation
 
