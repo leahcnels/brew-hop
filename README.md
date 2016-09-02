@@ -30,8 +30,6 @@ You will need the following things properly installed on your computer.
 * You will need a Google developer key.
   * From the terminal, while in the brew-hop folder, run $ curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js?key= YOUR API KEY GOES HERE.
 * From the terminal, run $ source .env
-* From the terminal, run $ ember s
-* In your browser, navigate to localhost:4200
 
 ## Running / Development
 
