@@ -15,8 +15,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
-* Foursquare Client ID and Secret
-* Google Developer API key
+* [Foursquare Client ID and Secret](https://developer.foursquare.com/)
+* [Google Developer API key](https://console.developers.google.com/flows/enableapi?apiid=maps_backend&keyType=CLIENT_SIDE&reusekey=true)
 
 ## Installation
 
@@ -29,6 +29,7 @@ You will need the following things properly installed on your computer.
   * export clientSecret="Your client secret goes here"
 * You will need a Google developer key.
   * From the terminal, while in the brew-hop folder, run $ curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js?key= YOUR API KEY GOES HERE.
+* From the terminal, run $ source .env
 
 ## Running / Development
 
